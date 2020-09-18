@@ -17,8 +17,6 @@ static void btn2_click(GtkWidget *widget, GtkLabel *label){
 
 }
 
-
-
 // procedimento principal
 int main(int argc, char * argv[]){
 
