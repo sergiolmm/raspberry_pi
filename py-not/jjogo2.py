@@ -16,6 +16,15 @@ if image2 == None:
     print("Erro ao carregar")
     quit()
 
+image1a = pg.image.load('./img/R2.png')
+if image1 == None:
+    print("Erro ao carregar")
+    quit()
+image2a = pg.image.load('./img/R3.png')
+if image2 == None:
+    print("Erro ao carregar")
+    quit()
+
 
 # criar funcao que sera executada na thread
 i_x = 10
@@ -35,12 +44,18 @@ def anda_img(size, len):
         else:
             i_x -= 5
 
-        if i_x <= 0:
+        if i_x <= -30:
             sentido2 = 0
         if anda:    
-            img = image1
+            if sentido2 == 1:
+                img = image1
+            else:
+                img  = image1a    
         else:
-            img = image2
+            if sentido2 == 1:
+                img = image2
+            else:
+                img  = image2a    
         if i_x >= (len - size):
             sentido2 = 1
             
